@@ -29,7 +29,7 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            Sistema de Comércio Eletrônico
+            Sistema de Livraria
             <small>Admin</small>
         </h1>
         <ol class="breadcrumb">
@@ -53,12 +53,16 @@
             <div class="alert <%=classe%>">
                 <%=msg%>
             </div>
-            <form action="#" method="post">
+            <form action="../UploadWS" method="post" enctype="multipart/form-data">
 
                 <div class="col-lg-6">
 
                     <div class="form-group">
-                        <label>Nome</label>
+                        <label>CNPJ:</label>
+                        <input class="form-control" type="text"  name="txtCnpj"  required />
+                    </div>
+                    <div class="form-group">
+                        <label>Nome:</label>
                         <input class="form-control" type="text"  name="txtNome"  required />
                     </div>
                  
