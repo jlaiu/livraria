@@ -18,7 +18,8 @@
         if (resultado) {
             msg = "Registro cadastrado com sucesso";
             classe = "alert-success";
-        } else {
+        } 
+        else {
             msg = "Não foi possível cadastrar";
             classe = "alert-danger";
         }
@@ -29,7 +30,7 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            Sistema de Comércio Eletrônico
+            Sistema de Livraria
             <small>Admin</small>
         </h1>
         <ol class="breadcrumb">
@@ -53,7 +54,7 @@
             <div class="alert <%=classe%>">
                 <%=msg%>
             </div>
-            <form action="UploadWS" method="post" enctype="multipart/form-data">
+            <form action="../UploadWS" method="post" enctype="multipart/form-data">
 
                 <div class="col-lg-6">
 
