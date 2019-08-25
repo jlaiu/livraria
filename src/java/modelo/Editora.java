@@ -16,15 +16,18 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author aluno
+ * @author Júlia
  */
 @Entity
 @Table(name = "editora")
 @NamedQueries({
-    @NamedQuery(name = "Editora.findAll", query = "SELECT e FROM Editora e")})
+    @NamedQuery(name = "Editora.findAll", query = "SELECT e FROM Editora e"),
+    @NamedQuery(name = "Editora.findFilter",
+            query = "SELECT e FROM Editora e WHERE e.nome like :filtro")})
 public class Editora implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -75,7 +78,8 @@ public class Editora implements Serializable {
     public void setLogo(String logo) {
         this.logo = logo;
     }
-
+    
+    @XmlTransient
     public List<Livro> getLivroList() {
         return livroList;
     }
